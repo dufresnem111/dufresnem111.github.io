@@ -1,106 +1,121 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Project: Event invite</title>
-        <style>
-        #mainsection{
-            background-color: rgb(125, 193, 227);
-            
-        }
-        body{
-            background-image: url(https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/space/background.png);
-        }
-            h1{
-                font-weight: bold;
-                font-family: cursive, sans-serif;
-                text-align: center;
-                font-size: 35px;
-                
-            }
-            h2{
-                font-weight: bold;
-                font-family: monospace, sans-serif;
-                text-align: center;
-                font-style: italic;
-                font-size: 55px;
-                border-style: groove;
-                border-width: 10px;
-                border-color:rgb(153, 144, 153);
-                
-            }
-            h3{
-                text-align: center;
-                font-family: monospace;
-                font-style: italic;
-            }
-            #mainsection{
-                margin-left: 100px;
-                margin-right: 100px;
-                margin-top: 1px;
-                margin-bottom: 1px;
-            }
-            #date{
-                text-align: center;
-                font-size: 15px;
-                font-style: italic;
-                font-family: monospace;
-            }
-            #break{
-                font-size: 25px;
-            }
-            #exact_date{
-                font-size: 28px;
-                font-style: italic;
-                
-            }
-            p{
-                text-align: center;
-                font-family: monospace;
-                font-weight: bold;
-                font-style: italic;
-                
-            }
-            #theme{
-                font-size: 25px;
-                font-style: italic;
-                
-            }
-            #rsvp{
-                text-align: center;
-                border: inset;
-                display: inline;
-                margin-left: 140px;
-            }
-            a:link{
-                background-color: black;
-                text-decoration: none;
-                font-family: fantasy;
-                
-             
-            }
-            #rsvp1{
-                color:white;
-                margin: 5px;
-                margin-bottom: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="mainsection"><h2>END OF SUMMER PARTY!!</h2>
-        <h1><span id="break">YOU ARE</span><br> INVITED!</h1>
-        
-        
-        <h3 id="date"><span id="exact_date">August 5th, 2022</span><br>Noon to midnight</h3>
-        <h3>Super cool park<br>241 Super cool park street, Florida</h3> 
-        <p> Celebrate the end of summer with everyone. Bring frends famliy, random person, whoever it doesnt matter. Don't miss the opurtunity to have the time of your lifes.</p>
-        <h3 id="theme">THEME</h3>
-        <p>Random fun theme. Wear wacky colors, a suit, cosutmes, just anything as random as possible. Best random outfit wins!!</p>
-        <h3>RSVP</h3>
-        <div id="rsvp"><a href="https://www.w3schools.com/html/html_links.asp"><span id="rsvp1">RSVP HERE</span></a></div>
-        </div>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="prefixfree.js"></script>
+  </head>
+  <style>#outside {
+  z-index: 1;
+  position: absolute;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 1s;
+  transform-origin: 0;
+}
+
+.open-card {
+  transform: rotateY(90deg);
+}
+
+#outside-title {
+  color: black;
+  font-family: Courier;
+  font-size: 12pt;
+  text-align: center;
+}
+
+#outside-pic {
+  width: 150px;
+  height: 150px;
+}
+
+#outside-help {
+  color: black;
+  font-family: Courier;
+  font-size: 12pt;
+  text-align: center;
+  padding: 20px;
+}
+
+#inside {
+  z-index: 0;
+  position: absolute;
+  background-image: url("https://i.pinimg.com/originals/82/55/ab/8255ab3d41b5aed65c2c99b068796a6d.jpg");
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#inside-title {
+  color: black;
+  font-family: Courier;
+  font-size: 12pt;
+  text-align: center;
+}
+
+#inside-pic {
+  width: 50px;
+  height: 150px;
+}
+
+#message {
+  color: black;
+  font-family: Courier;
+  font-size: 12pt;
+  text-align: center;
+}
+
+button {
+  background: silver;
+}
+</style>
+<script>
+function open_card() {
+  document.getElementById('outside').className = 'open-card';
+}
+
+function close_card() {
+  document.getElementById('outside').className = '';
+}
+</script>
+
+  <body>
+  
+    <div id="outside">
     
+      <p id="outside-title">
+        Happy Birthday!
+      </p>
+
+      <img id="outside-pic" src="robot.png">
+
+      <p>
+        <button onclick="open_card()">Click to open</button>
+      </p>
+
+    </div>
+  
+    <div id="inside">
     
-        
-    </body>
+      <p id="inside-title">
+        Happy Birthday!
+      </p>
+      
+      <img id="inside-pic" src="girl.png">
+      
+      <p id="message">
+        Your message here!
+      </p>
+
+      <p>
+        <button onclick="close_card()">Click to close</button>
+      </p>
+      
+    </div>
+    
+  </body>
+  
 </html>
