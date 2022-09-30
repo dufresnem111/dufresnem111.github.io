@@ -5,12 +5,14 @@
     <script src="script.js"></script>
     <script src="prefixfree.js"></script>
   </head>
-  <style>#outside {
+  <style>
+  #outside {
   z-index: 1;
   position: absolute;
-  background-color: lightgray;
+  background-image:url("https://img.freepik.com/free-vector/birthday-background-flat-design_23-2148448265.jpg?w=2000");
+  background-position: center;
   width: 100%;
-  height: 100%;
+  height: 115%;
   text-align: center;
   transition: 1s;
   transform-origin: 0;
@@ -22,14 +24,19 @@
 
 #outside-title {
   color: black;
-  font-family: Courier;
-  font-size: 12pt;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;  
+  font-family: fantasy;
+  font-size: 30pt;
   text-align: center;
 }
 
 #outside-pic {
-  width: 150px;
-  height: 150px;
+  width: 500px;
+  height: 500px;
 }
 
 #outside-help {
@@ -43,7 +50,7 @@
 #inside {
   z-index: 0;
   position: absolute;
-  background-image: url("https://i.pinimg.com/originals/82/55/ab/8255ab3d41b5aed65c2c99b068796a6d.jpg");
+  background-image: url("https://t3.ftcdn.net/jpg/03/19/94/16/360_F_319941667_njUIYOVoATcmXcmfdM4kWPNZBN2ud3zH.jpg");
   width: 100%;
   height: 100%;
   text-align: center;
@@ -51,25 +58,45 @@
 
 #inside-title {
   color: black;
-  font-family: Courier;
-  font-size: 12pt;
+  text-shadow:-2px -2px 0 green,
+    2px -2px 0 red,
+    -2px 2px 0 green,
+    2px 2px 0 red;  
+  font-family: fantasy;
+  font-size: 30pt;
   text-align: center;
 }
 
 #inside-pic {
-  width: 50px;
-  height: 150px;
+  width: 1000px;
+  height: 500px;
+}
+#inside-pic2{
+height:150px;
+width:150px;
+margin-left:500px
 }
 
 #message {
   color: black;
-  font-family: Courier;
-  font-size: 12pt;
+  font-family: cursive;
+  font-size: 18pt;
   text-align: center;
+  font-sytle:italic;
+  text-shadow:-1px -1px 0 green,
+    1px -1px 0 red,
+    -1px 1px 0 green,
+    1px 1px 0 red; 
+  
 }
 
 button {
   background: silver;
+  height:70px;
+  width:200px;
+  border:dashed;
+  border-color:red green red green;
+  border-width:4px;
 }
 </style>
 <script>
@@ -87,10 +114,10 @@ function close_card() {
     <div id="outside">
     
       <p id="outside-title">
-        Happy Birthday!
+        Happy 12th Birthday!
       </p>
 
-      <img id="outside-pic" src="robot.png">
+      <img id="outside-pic" src="https://i.pinimg.com/564x/56/7e/81/567e81b3c929675eee8da7806caba598.jpg">
 
       <p>
         <button onclick="open_card()">Click to open</button>
@@ -104,15 +131,18 @@ function close_card() {
         Happy Birthday!
       </p>
       
-      <img id="inside-pic" src="girl.png">
+      <img id="inside-pic" src="https://i.imgflip.com/2432y9.jpg">
       
       <p id="message">
-        Your message here!
+        Crazy Right!?
       </p>
+	  <img id="inside-pic2"src="https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1651966351655941~c5_720x720.jpeg?x-expires=1664708400&x-signature=e%2Famk%2BvtlJ1ZmLs2OZqwFgPO90A%3D">
 
       <p>
         <button onclick="close_card()">Click to close</button>
       </p>
+	  <p id="youtube"><button onclick="location.href='https://www.youtube.com/watch?v=UOzgpn7qv5g'" type="button">
+         Click for Suprise!</button></p>
       
     </div>
     
